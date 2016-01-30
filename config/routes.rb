@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :ideas
+  get 'ideas' => 'ideas#index'
+  post 'ideas' => 'ideas#create'
+  put 'ideas/:id' => 'ideas#update'
+  delete 'ideas/:id' => 'ideas#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
